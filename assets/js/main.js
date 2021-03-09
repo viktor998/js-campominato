@@ -3,7 +3,6 @@ var flag= false;
 var counter = [];
 numberRandomInRange(1,100);
 
-
 // Random in range gen
 function numberRandomInRange(min, max) {  
     for (var i = 0; i < 16; i++) {
