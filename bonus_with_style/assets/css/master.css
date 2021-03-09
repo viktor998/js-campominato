@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:green;
+}
+
+.campoMinato{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.campoMinato  div{
+    width: 60px;
+    height:60px;
+    background-color:lightgrey;
+    border: 1px solid black;
+}
+
+.campoMinato  div:hover{
+    cursor: pointer;
+}
