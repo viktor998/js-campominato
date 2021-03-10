@@ -10,6 +10,7 @@ body{
     align-items: center;
     height: 100vh;
     background-color:green;
+    
 }
 
 .campoMinato{
@@ -30,4 +31,21 @@ body{
 
 .campoMinato  div:hover{
     cursor: pointer;
+}
+
+p{
+    display: none;
+}
+
+p.record{
+    bottom: 70px;
+    font-size: 90px;
+}
+
+.Result{
+    position:absolute;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 150px;
+    display: block;
 }

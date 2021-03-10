@@ -4,6 +4,7 @@ var counter = [];
 var minValue=0;
 var maxValue=0;
 var myDiv = document.querySelector('.campoMinato'); 
+var final = document.querySelector('.Result');///////////////////////////////
 // var nodeIndex = [];
 numberRandomInRange(1,100);
 console.log("i numeri generati sono: ", cpuGen);
@@ -11,7 +12,6 @@ console.log("i numeri generati sono: ", cpuGen);
 for (let i = 1; i < 100 +1; i++) {
     var node =document.createElement("DIV");
     var nodeIndex = myDiv.appendChild(node);  
-    
     
     for (var k = 0, len = myDiv.children.length; k < len; k++){
     (function(index){
@@ -30,7 +30,8 @@ for (let i = 1; i < 100 +1; i++) {
               }
               if (flag) {
                 console.log("Hai perso");
-                myDiv.children[indexFound-1].style.background='red';
+                myDiv.children[indexFound-1].style.background="red";
+                $('.campoMinato p').addClass('Result');
                 // nodeIndex[i].style.color ='red';
                 console.log("il quadrato con la bomba ha index :", indexFound);
                 endGame();
@@ -45,9 +46,7 @@ for (let i = 1; i < 100 +1; i++) {
         }    
     })(k);
 
-}
-
-    
+}  
     
 }
 
@@ -124,9 +123,6 @@ function userTyping(){
     }
     
     return counter;
-    
-    
-    
 }
 
 
@@ -139,6 +135,7 @@ function endGame(){
         record++;
         
     }
+    $('p.record').html("Hai fatto :" + record + "punti");
     console.log("Il tuo record: ", record);
     
 }
